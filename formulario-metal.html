@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia del Metal - Cuestionario</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #ddd;
+            background-color: #222;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #f33;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .form-section {
+            background-color: #333;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border-left: 5px solid #f33;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            background-color: #444;
+            border: 1px solid #555;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #f33;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #d22;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #f33;
+        }
+
+        .era {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 80px;
+        }
+
+        .era-year {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: #f33;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .era-content {
+            background: #444;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Historia del Metal - Cuestionario</h1>
+    <p>Este formulario te guiará a través de la historia del metal mientras recopila tus preferencias musicales y
+        conocimientos sobre el género.</p>
+
+    <form action="#" method="post">
+        <!-- Sección de información personal -->
+        <div class="form-section">
+            <h2>Información Personal</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="13" max="100">
+
+            <label for="pais">País de residencia:</label>
+            <select id="pais" name="pais">
+                <option value="">Selecciona un país</option>
+                <option value="us">guatemala</option>
+
+            </select>
+        </div>
+
+        <!-- Línea de tiempo de la historia del metal -->
+        <div class="form-section">
+            <h2>La Historia del Metal</h2>
+            <p>El heavy metal es un género musical que surgió a finales de los años 60 y principios de los 70, con
+                raíces en el blues rock, el rock psicodélico y el rock ácido. A continuación, un recorrido por sus
+                principales eras:</p>
+
+            <div class="timeline">
+                <div class="era">
+                    <div class="era-year">1968-1975</div>
+                    <div class="era-content">
+                        <h3>Los Orígenes</h3>
+                        <p>Bandas como Black Sabbath, barderos y my chemical sentaron las bases del género. Black
+                            Sabbath es considerada por muchos como la primera banda de heavy metal, con su sonido oscuro
+                            y pesado.</p>
+                        <label for="favorite_early">¿Cuál es tu banda favorita de esta era?</label>
+                        <select id="favorite_early" name="favorite_early">
+                            <option value="sabbath">barderos/option>
+                            <option value="barderos">Metallica</option>
+                            <option value="my chemical romance">my chemical romance</option>
+                            <option value="other">Otra</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="era">
+                    <div class="era-year">1975-1983</div>
+                    <div class="era-content">
+                        <h3>La Nueva Ola del Heavy Metal Británico (NWOBHM)</h3>
+                        <p>Bandas como Iron Maiden, Judas Priest y Motorhead llevaron el metal a nuevos niveles de
+                            velocidad y energía. Esta era también vio el surgimiento del punk, que influyó en la actitud
+                            del metal.</p>
+                        <label>¿Has asistido a conciertos de bandas de esta era? (aunque sean en años recientes)</label>
+                        <div class="radio-group">
+                            <input type="radio" id="nwobhm_yes" name="nwobhm_concerts" value="yes">
+                            <label for="nwobhm_yes" style="display: inline;">Sí</label>
+                            <input type="radio" id="nwobhm_no" name="nwobhm_concerts" value="no" checked>
+                            <label for="nwobhm_no" style="display: inline;">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="era">
+                    <div class="era-year">1983-1991</div>
+                    <div class="era-content">
+                        <h3>El Thrash Metal y la Diversificación</h3>
+                        <p>Metallica, Megadeth, Slayer y Anthrax (los "Cuatro Grandes" del thrash) llevaron el metal a
+                            extremos de velocidad y agresión. Paralelamente, surgieron el glam metal (Mötley Crüe,
+                            Poison) y el power metal (Helloween).</p>
+                        <label>Selecciona tus subgéneros favoritos de esta era:</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="thrash" name="subgenres_80s" value="thrash">
+                            <label for="thrash" style="display: inline;">Thrash Metal</label><br>
+                            <input type="checkbox" id="glam" name="subgenres_80s" value="glam">
+                            <label for="glam" style="display: inline;">Glam Metal</label><br>
+                            <input type="checkbox" id="power" name="subgenres_80s" value="power">
+                            <label for="power" style="display: inline;">Power Metal</label><br>
+                            <input type="checkbox" id="prog" name="subgenres_80s" value="prog">
+                            <label for="prog" style="display: inline;">Metal Progresivo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="era">
+                    <div class="era-year">1991-1999</div>
+                    <div class="era-content">
+                        <h3>El Death Metal, Black Metal y la Alternatividad</h3>
+                        <p>Mientras el grunge dominaba las listas, el metal se volvió más extremo con el death metal
+                            (Death, Cannibal Corpse) y el black metal (Mayhem, Emperor). También surgió el groove metal
+                            (Pantera) y el metal alternativo (Tool, Deftones).</p>
+                        <label for="extreme_opinion">¿Qué opinas del metal extremo de los 90?</label>
+                        <textarea id="extreme_opinion" name="extreme_opinion" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <div class="era">
+                    <div class="era-year">2000-Presente</div>
+                    <div class="era-content">
+                        <h3>La Era Moderna</h3>
+                        <p>El metalcore (Killswitch Engage), el djent (Meshuggah), el folk metal (Finntroll) y el metal
+                            industrial (Rammstein) han dominado la escena. El metal sigue evolucionando con fusiones con
+                            otros géneros.</p>
+                        <label for="modern_bands">Nombra algunas bandas modernas de metal que te gusten:</label>
+                        <input type="text" id="modern_bands" name="modern_bands">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de preferencias musicales -->
+        <div class="form-section">
+            <h2>Tus Preferencias Musicales</h2>
+
+            <label for="first_metal">¿Cuál fue la primera banda de metal que escuchaste?</label>
+            <input type="text" id="first_metal" name="first_metal">
+
+            <label for="favorite_album">¿Cuál es tu álbum de metal favorito de todos los tiempos?</label>
+            <input type="text" id="favorite_album" name="favorite_album">
+
+            <label for="attended_concerts">¿Cuántos conciertos de metal has asistido aproximadamente?</label>
+            <select id="attended_concerts" name="attended_concerts">
+                <option value="0">Ninguno</option>
+                <option value="1-5">1-5</option>
+                <option value="6-10">6-10</option>
+                <option value="11-20">11-20</option>
+                <option value="20+">Más de 20</option>
+            </select>
+
+            <label>¿Tocas algún instrumento musical?</label>
+            <div class="radio-group">
+                <input type="radio" id="instrument_yes" name="plays_instrument" value="yes">
+                <label for="instrument_yes" style="display: inline;">Sí</label>
+                <input type="radio" id="instrument_no" name="plays_instrument" value="no" checked>
+                <label for="instrument_no" style="display: inline;">No</label>
+            </div>
+
+            <label for="instrument_type">Si respondiste "Sí", ¿qué instrumento(s) tocas?</label>
+            <input type="text" id="instrument_type" name="instrument_type" disabled>
+        </div>
+
+        <!-- Sección de opiniones -->
+        <div class="form-section">
+            <h2>Tus Opiniones sobre el Metal</h2>
+
+            <label for="metal_future">¿Cómo ves el futuro del metal como género musical?</label>
+            <textarea id="metal_future" name="metal_future" rows="4"></textarea>
+
+            <label for="underrated_band">¿Qué banda de metal crees que es la más infravalorada?</label>
+            <input type="text" id="underrated_band" name="underrated_band">
+
+            <label for="overrated_band">¿Qué banda de metal crees que es la más sobrevalorada?</label>
+            <input type="text" id="overrated_band" name="overrated_band">
+
+            <label>¿Crees que el metal es un género que resistirá el paso del tiempo?</label>
+            <div class="radio-group">
+                <input type="radio" id="timeless_yes" name="metal_timeless" value="yes">
+                <label for="timeless_yes" style="display: inline;">Sí, siempre habrá metal</label>
+                <input type="radio" id="timeless_no" name="metal_timeless" value="no">
+                <label for="timeless_no" style="display: inline;">No, eventualmente desaparecerá</label>
+                <input type="radio" id="timeless_evolve" name="metal_timeless" value="evolve" checked>
+                <label for="timeless_evolve" style="display: inline;">Evolucionará en algo nuevo</label>
+            </div>
+        </div>
+
+        <!-- Sección final -->
+        <div class="form-section">
+            <h2>¡Gracias por tu participación!</h2>
+            <p>Este formulario ha sido un recorrido por la historia del metal mientras exploramos tus gustos y
+                opiniones. ¿Te gustaría recibir más información sobre la historia del metal o eventos relacionados?</p>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                <label for="newsletter" style="display: inline;">Sí, quiero recibir un boletín sobre la historia del
+                    metal</label><br>
+                <input type="checkbox" id="events" name="events" value="yes">
+                <label for="events" style="display: inline;">Sí, quiero recibir información sobre eventos de
+                    metal</label><br>
+                <input type="checkbox" id="new_releases" name="new_releases" value="yes">
+                <label for="new_releases" style="display: inline;">Sí, quiero recibir información sobre nuevos
+                    lanzamientos</label>
+            </div>
+
+            <label for="comments">¿Algún comentario adicional sobre el metal o este cuestionario?</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Enviar Respuestas</button>
+    </form>
+
+    <script>
+        // Habilitar campo de instrumento si se selecciona "Sí"
+        document.getElementById('instrument_yes').addEventListener('change', function () {
+            document.getElementById('instrument_type').disabled = !this.checked;
+        });
+        document.getElementById('instrument_no').addEventListener('change', function () {
+            document.getElementById('instrument_type').disabled = this.checked;
+        });
+    </script>
+</body>
+
+</html>
